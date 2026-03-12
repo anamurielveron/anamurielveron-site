@@ -9,6 +9,7 @@ export type CurrentlyType =
     | "watching"
     | "listening-to"
     | "learning"
+    | "studying"
     | "working-on"
     | "playing"
 ;
