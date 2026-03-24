@@ -1,0 +1,81 @@
+{
+    "meta": {
+        "name": "Ana Muriel Veron",
+        "title": "BS Computer Science Student | Programmer",
+        "greeting": "HELLO, FRIEND",
+        "photo": "/profile.jpg",
+        "cv": ""
+    },
+    "currently": [
+        {"type": "watching", "item": "One Piece Live Action"},
+        {"type": "playing", "item": "Dungeons & Dragons 5e"}
+    ],
+    "experience": [
+        {
+            "start": "FEB 2026",
+            "end": "present",
+            "role": "Programmer",
+            "organization": "Technistock Philippines, Inc.",
+            "description": ""
+        }
+    ],
+    "education": [
+        {
+            "start": "2021",
+            "end": "2026",
+            "degree": "BS Computer Science",
+            "school": "De La Salle University - Manila, Philippines",
+            "description": "Specialization in Software Technology"
+        },
+        {
+            "start": "2019",
+            "end": "2021",
+            "degree": "BA Literature",
+            "school": "University of Santo Tomas - Manila, Philippines",
+            "description": "Completed 2 years before transferring to DLSU"
+        }
+    ],
+    "techStack": [
+        "Python",
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Tailwind",
+        "C#",
+        "SQL",
+        "C++",
+        "Git",
+        "Figma",
+        "Adobe Photoshop",
+        "Adobe Illustrator"
+    ],
+    "interests": [
+        "Baking",
+        "Crafts",
+        "Dungeons & Dragons",
+        "Film",
+        "Tea",
+        "Videogames"
+    ],
+    "projects": [
+        {
+            "id": "personal-website",
+            "title": "Personal Website",
+            "description": "A personal portfolio website built with React and Tailwind CSS, showcasing my experience, education, skills, and projects.",
+            "thumbnail": null,
+            "techStack": ["React", "TypeScript", "Tailwind CSS"],
+            "githubUrl": "",
+            "liveUrl": "",
+            "featured": true
+        }
+    ],
+    "contact": {
+        "status": "Open to chat",
+        "email": "anamurielveron@gmail.com",
+        "github": "https://github.com/anamurielveron",
+        "linkedin": "https://www.linkedin.com/in/anamurielveron/",
+        "instagram": "https://www.instagram.com/anamurielveron/"
+    }
+}
