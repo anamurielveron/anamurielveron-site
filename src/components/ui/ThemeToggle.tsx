@@ -1,7 +1,7 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { RiSunFill, RiMoonFill } from 'react-icons/ri';
+import { RiSunLine, RiSunFill, RiMoonLine, RiMoonFill } from 'react-icons/ri';
 
 export default function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -10,16 +10,29 @@ export default function ThemeToggle() {
     return <div className='w-6 h-6' />;
   }
 
+  const isDark = resolvedTheme === 'dark';
+
   return (
     <button
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
       aria-label="Toggle theme"
-      className="text-accent hover:text-accent-muted transition-colors"
+      className="group relative w-6 h-6 text-accent hover:scale-110 transition-all"
     >
-      {resolvedTheme === 'dark'
-        ? <RiSunFill size={22} />
-        : <RiMoonFill size={22} />
-      }
+      {/* Sun */}
+      {isDark && (
+        <>
+          <RiSunLine className="absolute inset-0 group-hover:opacity-0 transition-opacity" size={22} />
+          <RiSunFill className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity" size={22} />
+        </>
+      )}
+
+      {/* Moon */}
+      {!isDark && (
+        <>
+          <RiMoonLine className="absolute inset-0 group-hover:opacity-0 transition-opacity" size={22} />
+          <RiMoonFill className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity" size={22} />
+        </>
+      )}
     </button>
   );
 }

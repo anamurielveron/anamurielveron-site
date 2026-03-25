@@ -36,7 +36,7 @@ export interface SiteData {
         title: string;
         greeting: string;
         photo: string;
-        cv: string;
+        resume: string;
     };
     currently: CurrentlyEntry[];
     experience: ExperienceEntry[];

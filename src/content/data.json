@@ -2,9 +2,9 @@
     "meta": {
         "name": "Ana Muriel Veron",
         "title": "BS Computer Science Student | Programmer",
-        "greeting": "HELLO, FRIEND",
+        "greeting": "HELLO, FRIEND.",
         "photo": "/profile.jpg",
-        "cv": ""
+        "resume": "/VERON-resume.pdf"
     },
     "currently": [
         {"type": "watching", "item": "One Piece Live Action"},
