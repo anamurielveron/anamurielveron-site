@@ -27,7 +27,7 @@ export default function Hero() {
                 </div>
                 {/* Download Resume */}
                 <a href={meta.resume} download className='inline-flex items-center gap-3 border border-accent
-                                                            px-5 py-3 text-sm font-body text-accent uppercase
+                                                            px-4 py-2 text-sm font-body text-accent uppercase
                                                             hover:bg-accent hover:text-accent-content transition-colors w-fit'>
                     Download Resume <RiDownloadLine size={16} />
                 </a>

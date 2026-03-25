@@ -18,7 +18,7 @@ export default function Navbar() {
                 <Logo className="w-18 h-18 text-accent hover:scale-110 transition-all" />
             </Link>
 
-            <nav className='flex items-center border border-accent'>
+            <nav className='flex items-center bg-base-100 border border-accent'>
                 {navLinks.map((link) => (
                     <Link
                         key={link.href}

@@ -28,9 +28,9 @@
 
 /* Light Mode */
 [data-theme='light'] {
-  --color-base-100: #D1D1D1;
+  --color-base-100: #F0F0F0;
   --color-base-200: #E0E0E0;
-  --color-base-300: #F0F0F0;
+  --color-base-300: #D1D1D1;
   --color-content: #003FDD;
   --color-accent: #003FDD;
   --color-accent-muted: #002A99;
