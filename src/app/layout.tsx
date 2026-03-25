@@ -2,6 +2,12 @@ import { Space_Grotesk, Space_Mono, Noto_Sans } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 
+export const metadata = {
+  icons: {
+    icon: '/favicon.ico'
+  }
+}
+
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-grotesk',

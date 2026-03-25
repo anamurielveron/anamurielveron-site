@@ -10,8 +10,9 @@
   --color-base-300: #2E2E2E;
   --color-content: #41FF00;
   --color-accent: #41FF00;
-  --color-accent-muted: #1EA849;
+  --color-accent-muted: #D1D1D1;
   --color-accent-content: #0B0B0B;
+  --color-gray: #D1D1D1;
 }
 
 /* Dark Mode (default) */
@@ -22,8 +23,9 @@
   --color-base-300: #2E2E2E;
   --color-content: #41FF00;
   --color-accent: #41FF00;
-  --color-accent-muted: #1EA849;
+  --color-accent-muted: #D1D1D1;
   --color-accent-content: #0B0B0B;
+  --color-gray: #D1D1D1;
 }
 
 /* Light Mode */
@@ -33,8 +35,9 @@
   --color-base-300: #D1D1D1;
   --color-content: #003FDD;
   --color-accent: #003FDD;
-  --color-accent-muted: #002A99;
+  --color-accent-muted: #8f8f8f;
   --color-accent-content: #D1D1D1;
+  --color-gray: #2E2E2E;
 }
 
 body {

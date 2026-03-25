@@ -16,7 +16,7 @@ export default function ThemeToggle() {
     <button
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       aria-label="Toggle theme"
-      className="group relative w-6 h-6 text-accent hover:scale-110 transition-all"
+      className="group relative w-6 h-6 text-accent transition-all"
     >
       {/* Sun */}
       {isDark && (

@@ -17,6 +17,13 @@
             "role": "Programmer",
             "organization": "Technistock Philippines, Inc.",
             "description": ""
+        },
+        {
+            "start": "Nov 2022",
+            "end": "Feb 2023",
+            "role": "Team Lead for Media & Publicity",
+            "organization": "DLSU Commission on Environmental Protection",
+            "description": ""
         }
     ],
     "education": [
@@ -36,7 +43,7 @@
         },
         {
             "start": "2017",
-            "end": "2029",
+            "end": "2019",
             "degree": "Senior High - Humanities and Social Sciences",
             "institution": "St. Stephen's High School"
         }
@@ -55,7 +62,8 @@
         "Git",
         "Figma",
         "Adobe Photoshop",
-        "Adobe Illustrator"
+        "Adobe Illustrator",
+        "Aseprite"
     ],
     "interests": [
         "Baking",
@@ -69,11 +77,11 @@
         {
             "id": "personal-website",
             "title": "Personal Website",
-            "description": "A personal portfolio website built with React and Tailwind CSS, showcasing my experience, education, skills, and projects.",
+            "description": "A personal portfolio showcasing my experience, education, skills, projects, and interests.",
             "thumbnail": null,
             "techStack": ["React", "TypeScript", "Tailwind CSS"],
-            "githubUrl": "",
-            "liveUrl": "",
+            "githubUrl": "https://github.com/anamurielveron/anamurielveron-site",
+            "liveUrl": "https://github.com/anamurielveron/anamurielveron-site",
             "featured": true
         }
     ],

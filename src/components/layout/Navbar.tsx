@@ -15,7 +15,7 @@ export default function Navbar() {
                        px-8 py-4">
             
             <Link href="#hero" aria-label="Home">
-                <Logo className="w-18 h-18 text-accent hover:scale-110 transition-all" />
+                <Logo className="w-18 h-18 text-accent transition-all" />
             </Link>
 
             <nav className='flex items-center bg-base-100 border border-accent'>

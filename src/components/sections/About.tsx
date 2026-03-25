@@ -70,7 +70,7 @@ export default function About() {
             {/* Tech Stack */}
             <div className="mb-14">
                 <h3 className="font-heading text-sm font-bold uppercase text-accent mb-4">
-                    Tech Stack
+                    Technologies
                 </h3>
                 <div className="flex flex-wrap gap-2 py-5">
                     {techStack.map((tech) => (
