@@ -6,7 +6,7 @@ export default function Hero() {
     const { meta } = data;
 
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center pt-24 px-8 md:px-20">
+        <section id="home" className="min-h-screen flex items-center justify-center pt-24 px-8 md:px-60">
             <div className="flex flex-col gap-6 max-w-lg">
                 {/* Photo */}
                 <div className="relative w-48 h-56 border border-accent">

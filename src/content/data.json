@@ -55,11 +55,13 @@
         "HTML",
         "CSS",
         "React",
+        "ASP.NET",
         "Tailwind",
         "C#",
         "SQL",
         "C++",
         "Git",
+        "TortoiseSVN",
         "Figma",
         "Adobe Photoshop",
         "Adobe Illustrator",
@@ -70,6 +72,7 @@
         "Crafts",
         "Dungeons & Dragons",
         "Film",
+        "Literature",
         "Tea",
         "Videogames"
     ],
@@ -81,7 +84,7 @@
             "thumbnail": null,
             "techStack": ["React", "TypeScript", "Tailwind CSS"],
             "githubUrl": "https://github.com/anamurielveron/anamurielveron-site",
-            "liveUrl": "https://github.com/anamurielveron/anamurielveron-site",
+            "liveUrl": "https://anamurielveron.vercel.app",
             "featured": true
         }
     ],

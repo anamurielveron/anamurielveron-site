@@ -42,7 +42,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                             aria-label="GitHub repository"
                         >
                             <RiGithubLine className="absolute inset-0 group-hover/icon:opacity-0 transition-opacity" size={18} />
-                            <RiGithubFill className="absolute inset-0 opacity-0 group-hover/icon:opacity-100 transition-opacity" size={18} />
+                            <RiGithubFill className="absolute inset-0 opacity-0 group-hover/icon:opacity-100 transition-opacity scale-110" size={18} />
                         </a>
                     )}
                     {project.liveUrl && (
@@ -53,7 +53,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                             aria-label="Live site"
                         >
                             <RiExternalLinkLine className="absolute inset-0 group-hover/icon:opacity-0 transition-opacity" size={18} />
-                            <RiExternalLinkFill className="absolute inset-0 opacity-0 group-hover/icon:opacity-100 transition-opacity" size={18} />
+                            <RiExternalLinkFill className="absolute inset-0 opacity-0 group-hover/icon:opacity-100 transition-opacity scale-110" size={18} />
                         </a>
                     )}
                 </div>
