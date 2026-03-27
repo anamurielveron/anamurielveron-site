@@ -1,17 +1,29 @@
+import Logo from '@/components/icons/Logo'
 import Image from 'next/image';
 import { RiGithubLine, RiGithubFill, RiExternalLinkLine, RiExternalLinkFill } from 'react-icons/ri';
 import type { Project } from '@/types';
 
 export default function ProjectCard({ project }: { project: Project }) {
-    const thumbnail = project.thumbnail ?? '/projects/thumbnail.png'
-
     return (
-        <div className='grid grid-cols-[160px_1fr] border border-accent hover:border-r-6 group/card'>
+        <div className='grid grid-cols-[160px_1fr] border border-accent
+                        hover:border-r-6 group/card'>
             
             {/* Thumbnail */}
-            <div className='relative border-r border-base-300 overflow-hidden'>
-                <Image src={thumbnail} alt={project.title} fill
-                        className='object-cover grayscale group-hover/card:grayscale-0 transition-all' />
+            <div className='relative border-r border-accent overflow-hidden'>
+                {project.thumbnail ? (
+                    <Image
+                        src={project.thumbnail}
+                        alt={project.title}
+                        fill
+                        className="object-cover grayscale group-hover/card:grayscale-0 transition-all"
+                    />
+                ) : (
+                    // TODO: center logo
+                    <div className="absolute inset-0 flex items-center justify-center p-6">
+                        <Logo className="w-full h-full text-accent opacity-30
+                                        group-hover/card:opacity-100 transition-opacity" />
+                    </div>
+                )}
             </div>
 
             {/* Details */}

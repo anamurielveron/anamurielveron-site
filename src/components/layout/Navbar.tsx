@@ -3,9 +3,9 @@ import Logo from '@/components/icons/Logo';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 
 const navLinks = [
-    {label: 'About', href: '#about' },
-    {label: 'Projects', href: '#projects' },
-    {label: 'Contact', href: '#contact' },
+    {label: 'About', href: '/#about' },
+    {label: 'Projects', href: '/#projects' },
+    {label: 'Contact', href: '/#contact' },
 ];
 
 // TODO: Turn logo into separate component and add animation on hover
