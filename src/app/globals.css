@@ -44,3 +44,18 @@ body {
   background-color: var(--color-base-100);
   color: var(--color-content);
 }
+
+/* Name Cursor Blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.1em;
+  background: var(--color-accent);
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}

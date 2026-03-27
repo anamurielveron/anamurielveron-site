@@ -9,10 +9,5 @@ export default function TechBadge({ label }: ItemBadgeProps) {
                         hover:bg-accent hover:text-accent-content transition-colors">
             {label}
         </span>
-        // <span className="border border-base-300 px-2 py-1
-        //                 font-body text-xs text-accent
-        //                 hover:border-accent transition-colors">
-        //     {label}
-        // </span>
     );
 }

@@ -20,11 +20,13 @@ export default function Hero() {
                     </p>
                     <h1 className='font-heading text-3xl md:text-4xl font-bold text-accent uppercase'>
                         {meta.name}
+                        <span className="cursor-blink" aria-hidden="true" />
                     </h1>
                     <p className='font-body text-sm text-accent mt-2'>
                         {meta.title}
                     </p>
                 </div>
+
                 {/* Download Resume */}
                 <a href={meta.resume} download className='inline-flex items-center gap-3 border border-accent
                                                             px-4 py-2 text-sm font-body text-accent uppercase
