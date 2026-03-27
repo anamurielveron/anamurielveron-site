@@ -6,9 +6,9 @@ export default function Footer() {
 
     const links = [
         { href: `mailto:${contact.email}`, icon: RiMailFill, label: 'Email' },
-        { href: `contact.github`, icon: RiGithubFill, label: 'GitHub' },
-        { href: `contact.linkedin`, icon: RiLinkedinFill, label: 'LinkedIn' },
-        { href: `contact.instagram`, icon: RiInstagramFill, label: 'Instagram' }
+        { href: contact.github, icon: RiGithubFill, label: 'GitHub' },
+        { href: contact.linkedin, icon: RiLinkedinFill, label: 'LinkedIn' },
+        { href: contact.instagram, icon: RiInstagramFill, label: 'Instagram' }
     ];
 
     return (
