@@ -49,27 +49,22 @@
         }
     ],
     "techStack": [
-        "Python",
-        "Pandas",
-        "Plotly",
-        "Numpy",
-        "TypeScript",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "React",
-        "Next.js",
-        "ASP.NET",
-        "Tailwind CSS",
-        "C#",
-        "SQL",
-        "C++",
-        "Git",
-        "TortoiseSVN",
-        "Figma",
-        "Adobe Photoshop",
-        "Adobe Illustrator",
-        "Aseprite"
+        {
+            "category": "Languages",
+            "items": ["Python", "TypeScript", "JavaScript", "C#", "C++", "HTML", "CSS", "SQL"]
+        },
+        {
+            "category": "Frameworks & Libraries",
+            "items": ["React", "Next.js", "ASP.NET", "Tailwind CSS", "Pandas", "NumPy", "Plotly"]
+        },
+        {
+            "category": "Tools & Platforms",
+            "items": ["Git", "TortoiseSVN"]
+        },
+        {
+            "category": "Design",
+            "items": ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Aseprite"]
+        }
     ],
     "interests": [
         "Baking",

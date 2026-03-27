@@ -1,5 +1,6 @@
 import ItemBadge from "@/components/ui/ItemBadge";
 import data from "@/content/data.json";
+import type { TechStack } from '@/types';
 
 function TimelineEntry({
     dates,
@@ -72,9 +73,18 @@ export default function About() {
                 <h3 className="font-heading text-sm font-bold uppercase text-accent mb-4">
                     Technologies
                 </h3>
-                <div className="flex flex-wrap gap-2 py-5">
-                    {techStack.map((tech) => (
-                        <ItemBadge key={tech} label={tech} />
+                <div className="flex flex-col gap-6">
+                    {(techStack as TechStack[]).map(({ category, items }) => (
+                        <div key={category}>
+                            <p className="font-body text-xs text-accent uppercase mb-2 pb-1">
+                                {category}
+                            </p>
+                            <div className="flex flex-wrap gap-2 mt-2">
+                                {items.map((tech) => (
+                                    <ItemBadge key={tech} label={tech} />
+                                ))}
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>

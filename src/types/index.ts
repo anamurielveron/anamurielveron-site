@@ -14,6 +14,11 @@ export interface EducationEntry {
     description?: string;
 }
 
+export interface TechStack {
+    category: string;
+    items: string[];
+}
+
 export interface Project {
     id: string;
     title: string;
@@ -41,7 +46,7 @@ export interface SiteData {
     currently: CurrentlyEntry[];
     experience: ExperienceEntry[];
     education: EducationEntry[];
-    techStack: string[];
+    techStack: TechStack[];
     interests: string[];
     projects: Project[];
     contact: {
