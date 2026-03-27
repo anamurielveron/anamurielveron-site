@@ -22,7 +22,7 @@ export default function ThemeToggle() {
       {isDark && (
         <>
           <RiSunLine className="absolute inset-0 group-hover:opacity-0 transition-opacity" size={22} />
-          <RiSunFill className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity" size={22} />
+          <RiSunFill className="absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all" size={22} />
         </>
       )}
 
@@ -30,7 +30,7 @@ export default function ThemeToggle() {
       {!isDark && (
         <>
           <RiMoonLine className="absolute inset-0 group-hover:opacity-0 transition-opacity" size={22} />
-          <RiMoonFill className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity" size={22} />
+          <RiMoonFill className="absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all" size={22} />
         </>
       )}
     </button>
