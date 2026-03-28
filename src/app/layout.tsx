@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
       suppressHydrationWarning
       className={`${spaceGrotesk.variable} ${spaceMono.variable} ${notoSans.variable}`}
     >
-      <body>
+      <body className='crt'>
         <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem={false}>
           {children}
         </ThemeProvider>

@@ -6,7 +6,7 @@ import type { Project } from '@/types';
 export default function ProjectCard({ project }: { project: Project }) {
     return (
         <div className='grid grid-cols-[160px_1fr] border border-accent
-                        hover:border-r-6 group/card'>
+                        hover:border-r-6 transition-all group/card'>
             
             {/* Thumbnail */}
             <div className='relative border-r border-accent overflow-hidden'>
@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                     // TODO: center logo
                     <div className="absolute inset-0 flex items-center justify-center p-6">
                         <Logo className="w-full h-full text-accent opacity-30
-                                        group-hover/card:opacity-100 transition-opacity" />
+                                        group-hover/card:opacity-100 transition-opacity duration-300" />
                     </div>
                 )}
             </div>

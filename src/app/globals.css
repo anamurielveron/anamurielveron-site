@@ -86,3 +86,56 @@ section[id] {
 .status-dot {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+/* CRT flicker animation */
+@keyframes crt-flicker {
+  0%   { opacity: 0.97; }
+  5%   { opacity: 0.94; }
+  10%  { opacity: 0.98; }
+  15%  { opacity: 0.93; }
+  20%  { opacity: 0.97; }
+  50%  { opacity: 0.96; }
+  55%  { opacity: 0.91; }  /* stronger flicker moment */
+  60%  { opacity: 0.98; }
+  100% { opacity: 0.97; }
+}
+
+@keyframes crt-scanlines-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 0 4px; } /* drifts one scanline cycle */
+}
+
+/* Scanlines Layer */
+.crt::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.04) 2px,
+    rgba(0, 0, 0, 0.04) 4px
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9999;
+  animation:
+    crt-scanlines-drift 8s linear infinite,
+    crt-flicker 0.15s steps(1) infinite;
+}
+
+/* Vignette layer */
+.crt::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 55%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  pointer-events: none;
+  z-index: 9998;
+}
+
