@@ -45,6 +45,16 @@ body {
   color: var(--color-content);
 }
 
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth Scroll Offset */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 /* Name Cursor Blink */
 @keyframes blink {
   0%, 100% { opacity: 1; }
