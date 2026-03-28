@@ -26,6 +26,7 @@
   --color-accent-muted: #208100;
   --color-accent-content: #0B0B0B;
   --color-gray: #8a8a8a;
+  --crt-scanline: rgba(255, 255, 255, 0.03);
 }
 
 /* Light Mode */
@@ -38,6 +39,7 @@
   --color-accent-muted: #012480;
   --color-accent-content: #D1D1D1;
   --color-gray: #666666;
+  --crt-scanline: rgba(0, 0, 0, 0.05);
 }
 
 body {
@@ -89,20 +91,16 @@ section[id] {
 
 /* CRT flicker animation */
 @keyframes crt-flicker {
-  0%   { opacity: 0.97; }
-  5%   { opacity: 0.94; }
-  10%  { opacity: 0.98; }
-  15%  { opacity: 0.93; }
-  20%  { opacity: 0.97; }
-  50%  { opacity: 0.96; }
-  55%  { opacity: 0.91; }  /* stronger flicker moment */
-  60%  { opacity: 0.98; }
-  100% { opacity: 0.97; }
+  0%, 90%, 100% { opacity: 0.97; }
+
+  92% { opacity: 0.94; }
+  94% { opacity: 0.91; }
+  96% { opacity: 0.98; }
 }
 
 @keyframes crt-scanlines-drift {
   0%   { background-position: 0 0; }
-  100% { background-position: 0 4px; } /* drifts one scanline cycle */
+  100% { background-position: 0 4px; }
 }
 
 /* Scanlines Layer */
@@ -114,15 +112,15 @@ section[id] {
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 0, 0, 0.04) 2px,
-    rgba(0, 0, 0, 0.04) 4px
+    var(--crt-scanline) 2px,
+    var(--crt-scanline) 4px
   );
   background-size: 100% 4px;
   pointer-events: none;
   z-index: 9999;
   animation:
     crt-scanlines-drift 8s linear infinite,
-    crt-flicker 0.15s steps(1) infinite;
+    crt-flicker 12s linear infinite;
 }
 
 /* Vignette layer */
@@ -132,10 +130,24 @@ section[id] {
   inset: 0;
   background: radial-gradient(
     ellipse at center,
-    transparent 55%,
+    transparent 60%,
     rgba(0, 0, 0, 0.45) 100%
   );
   pointer-events: none;
   z-index: 9998;
 }
 
+/* Mobile Nav Animation */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.mobile-nav.open {
+  max-height: 300px;
+  opacity: 1;
+}

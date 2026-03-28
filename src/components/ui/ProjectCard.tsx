@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             </div>
 
             {/* Details */}
-            <div className="p-5">
+            <div className="p-6">
                 <h3 className='font-heading font-semibold text-accent text-sm mb-1'>
                     {project.title}
                 </h3>
