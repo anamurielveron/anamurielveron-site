@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className='max-w-7xl mx-auto px-6'>
         <Hero />
         <About />
         <Projects />
