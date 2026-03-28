@@ -16,7 +16,17 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50">
+        <header
+            className={`
+                fixed top-0 left-0 right-0 z-50
+                transition-colors
+                md:bg-transparent md:border-b-0
+                ${menuOpen
+                ? 'bg-base-100 border-b border-accent'
+                : 'bg-transparent border-b-0'
+                }
+            `}
+        >
             <div className='flex items-center justify-between px-6 py-4'>
                 <Link href="#hero" aria-label="Home">
                     <Logo className="w-18 h-18 text-accent hover:scale-110 transition-transform" />
@@ -53,22 +63,24 @@ export default function Navbar() {
             </div>
             
             {/* Mobile Nav */}
-            {menuOpen && (
-                <nav className="md:hidden flex flex-col border-t border-b border-accent">
-                    {navLinks.map((link) => (
-                        <Link
-                        key={link.href}
-                        href={link.href}
-                        onClick={() => setMenuOpen(false)}
-                        className="px-6 py-4 text-sm font-body tracking-widest uppercase
-                                    text-accent bg-base-100
-                                    hover:bg-accent hover:text-accent-content transition-colors"
-                        >
-                        {link.label}
-                        </Link>
-                    ))}
-                </nav>
-            )}
+            <nav
+                className={`mobile-nav md:hidden border-t border-accent ${menuOpen ? 'open' : ''}`}
+                aria-hidden={!menuOpen}
+            >
+                {navLinks.map((link) => (
+                <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="px-6 py-4 text-sm font-body tracking-widest uppercase
+                            text-accent
+                            hover:bg-accent hover:text-accent-content transition-colors"
+                    tabIndex={menuOpen ? 0 : -1}
+                >
+                    {link.label}
+                </Link>
+                ))}
+            </nav>
         </header>
     );
 }
