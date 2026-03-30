@@ -28,7 +28,11 @@ export default function Navbar() {
             `}
         >
             <div className='flex items-center justify-between px-6 py-4'>
-                <Link href="#hero" aria-label="Home">
+                <Link 
+                    href={typeof window !== 'undefined' && window.location.pathname === '/' ? '/#hero' : '/'}
+                    aria-label="Home"
+                >
+                {/* LOGO */}
                     <Logo className="w-18 h-18 text-accent hover:scale-110 transition-transform" />
                 </Link>
 

@@ -16,12 +16,14 @@ export default function NotFound() {
             <main className='min-h-screen flex flex-col items-center justify-center
                             gap-6 px-8 text-center'>
                 {/* JIJI HUH */}
-                <Image src="/jiji_huh.png" alt="Confused Jiji" width={350} height={350}
+                <div className="relative w-60 h-60 border border-accent">
+                    <Image src="/jiji_huh.png" alt="Confused Jiji" width={350} height={350}
                         className='border border-accent' />
-                <div className={`absolute inset-0 bg-accent opacity-60 
+                    <div className={`absolute inset-0 bg-accent opacity-60 
                                     ${isDark ? 'mix-blend-multiply' : 'mix-blend-screen'}`}
                         aria-hidden="true"
                     />
+                </div>
 
                 <p className='font-body text-xs text-accent'>
                     {/* TODO: funny statement here idk */}
@@ -34,7 +36,7 @@ export default function NotFound() {
                 <Link
                     href="/"
                     className='border border-accent px-5 py-3 font-body text-sm text-accent uppercase
-                                hover:bg-accent hover:text-accent-content transition-colors mt-2'>
+                                hover:bg-accent hover:text-accent-content transition-colors mt-2 pointer-events-auto'>
                     Go Home
                 </Link>
             </main>
