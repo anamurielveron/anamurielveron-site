@@ -2,37 +2,55 @@
 
 import { useTheme } from 'next-themes';
 import { RiSunLine, RiSunFill, RiMoonLine, RiMoonFill } from 'react-icons/ri';
+import { useEffect, useState } from 'react';
+import LightModeFlash from './LightModeFlash';
 
 export default function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
-  
-  if (!resolvedTheme) {
-    return <div className='w-6 h-6' />;
-  }
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [flashKey, setFlashKey] = useState(0);
+  const [showFlash, setShowFlash] = useState(false);
 
-  const isDark = resolvedTheme === 'dark';
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return <div className='w-6 h-6' />;
+  
+  const handleToggle = () => {
+    const next = theme === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+
+    if (next === 'light') {
+      setFlashKey((prev) => prev + 1); // Trigger new flash
+      setShowFlash(true);
+    } else {
+      setShowFlash(false);
+    }
+  };
 
   return (
-    <button
-      onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      aria-label="Toggle theme"
-      className="group relative w-6 h-6 text-accent transition-all"
-    >
-      {/* Sun */}
-      {isDark && (
-        <>
-          <RiSunLine className="absolute inset-0 group-hover:opacity-0 transition-opacity" size={22} />
-          <RiSunFill className="absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all" size={22} />
-        </>
-      )}
+    <>
+      <button
+        onClick={handleToggle}
+        aria-label="Toggle theme"
+        className="group relative w-6 h-6 text-accent transition-all"
+      >
+        {/* Sun */}
+        {theme === 'dark' && (
+          <>
+            <RiSunLine className="absolute inset-0 group-hover:opacity-0 transition-opacity" size={22} />
+            <RiSunFill className="absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all" size={22} />
+          </>
+        )}
 
-      {/* Moon */}
-      {!isDark && (
-        <>
-          <RiMoonLine className="absolute inset-0 group-hover:opacity-0 transition-opacity" size={22} />
-          <RiMoonFill className="absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all" size={22} />
-        </>
-      )}
-    </button>
+        {/* Moon */}
+        {theme === 'light' && (
+          <>
+            <RiMoonLine className="absolute inset-0 group-hover:opacity-0 transition-opacity" size={22} />
+            <RiMoonFill className="absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all" size={22} />
+          </>
+        )}
+      </button>
+
+      {showFlash && <LightModeFlash key={flashKey} />}
+    </>
   );
 }

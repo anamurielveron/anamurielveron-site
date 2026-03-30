@@ -26,7 +26,6 @@ export default function NotFound() {
                 </div>
 
                 <p className='font-body text-xs text-accent'>
-                    {/* TODO: funny statement here idk */}
                     Jiji is confused too...
                 </p>
                 <h3 className='font-body font-bold text-accent text-xl uppercase'>
