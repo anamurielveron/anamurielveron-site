@@ -1,22 +1,35 @@
+'use client';
+
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
 export default function NotFound() {
+    const { resolvedTheme }  = useTheme();
+    const isDark = resolvedTheme === 'dark';
+
     return (
         <>
             <Navbar />
             <main className='min-h-screen flex flex-col items-center justify-center
                             gap-6 px-8 text-center'>
-                {/* TODO: cute image here */}
+                {/* JIJI HUH */}
+                <Image src="/jiji_huh.png" alt="Confused Jiji" width={350} height={350}
+                        className='border border-accent' />
+                <div className={`absolute inset-0 bg-accent opacity-60 
+                                    ${isDark ? 'mix-blend-multiply' : 'mix-blend-screen'}`}
+                        aria-hidden="true"
+                    />
 
+                <p className='font-body text-xs text-accent'>
+                    {/* TODO: funny statement here idk */}
+                    Jiji is confused too...
+                </p>
                 <h3 className='font-body font-bold text-accent text-xl uppercase'>
                     ERROR 404: page not found
                 </h3>
-                <p className='font-body text-xs text-accent'>
-                    {/* TODO: funny statement here idk */}
-                </p>
 
                 <Link
                     href="/"
