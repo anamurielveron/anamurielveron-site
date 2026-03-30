@@ -39,7 +39,7 @@
             "end": "2021",
             "degree": "BA Literature",
             "institution": "University of Santo Tomas - Manila, Philippines",
-            "description": "Completed 2 years before transferring to DLSU"
+            "description": "Completed 1.5 years before transferring to DLSU"
         },
         {
             "start": "2017",
@@ -50,16 +50,20 @@
     ],
     "techStack": [
         {
-            "category": "Languages",
-            "items": ["Python", "TypeScript", "JavaScript", "C#", "C++", "HTML", "CSS", "SQL"]
+            "category": "Frontend",
+            "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS"]
         },
         {
-            "category": "Frameworks & Libraries",
-            "items": ["React", "Next.js", "ASP.NET", "Tailwind CSS", "Pandas", "NumPy", "Plotly"]
+            "category": "Backend",
+            "items": ["ASP.NET", "C#", "Java"]
         },
         {
-            "category": "Tools & Platforms",
-            "items": ["Git", "TortoiseSVN"]
+            "category": "Data & Databases",
+            "items": ["Microsoft SQL Server", "SQL", "Python", "Pandas", "NumPy"]
+        },
+        {
+            "category": "Tools",
+            "items": ["Git", "TortoiseSVN", "Visual Studio", "Visual Studio Code"]
         },
         {
             "category": "Design",

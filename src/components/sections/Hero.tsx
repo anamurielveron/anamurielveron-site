@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { RiDownloadLine } from 'react-icons/ri';
