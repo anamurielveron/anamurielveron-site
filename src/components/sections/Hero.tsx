@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { RiDownloadLine } from 'react-icons/ri';
 import data from '@/content/data.json';
@@ -5,13 +9,19 @@ import data from '@/content/data.json';
 export default function Hero() {
     const { meta } = data;
 
+    const { resolvedTheme }  = useTheme();
+    const isDark = resolvedTheme === 'dark';
+
     return (
         <section id="home" className="min-h-screen flex items-center justify-center pt-24 px-8 md:px-60">
             <div className="flex flex-col gap-6 max-w-lg">
                 {/* Photo */}
                 <div className="relative w-48 h-56 border border-accent">
                     <Image src={meta.photo} alt={meta.name} fill className="object-cover object-top grayscale" priority />
-                    <div className="absolute inset-0 bg-accent opacity-60 mix-blend-multiply" aria-hidden="true" />
+                    <div className={`absolute inset-0 bg-accent opacity-60 
+                                    ${isDark ? 'mix-blend-multiply' : 'mix-blend-screen'}`}
+                        aria-hidden="true"
+                    />
                 </div>
                 {/* Text */}
                 <div>
