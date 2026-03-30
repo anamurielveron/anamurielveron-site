@@ -20,17 +20,17 @@ export default function Navbar() {
             className={`
                 fixed top-0 left-0 right-0 z-50
                 transition-colors
-                md:bg-transparent md:border-b-0
+                md:bg-transparent md:border-b-0 p-4
                 ${menuOpen
                 ? 'bg-base-100 border-b border-accent'
                 : 'bg-transparent border-b-0'
                 }
             `}
         >
-            <div className='flex items-center justify-between px-6 py-4'>
+            <div className='flex items-center justify-center px-6 py-4'>
                 <Link 
                     href={typeof window !== 'undefined' && window.location.pathname === '/' ? '/#hero' : '/'}
-                    aria-label="Home"
+                    className='absolute left-6' aria-label="Home"
                 >
                 {/* LOGO */}
                     <Logo className="w-18 h-18 text-accent hover:scale-110 transition-transform" />
@@ -52,7 +52,7 @@ export default function Navbar() {
                 </nav>
                 
                 {/* Right Corner */}
-                <div className='flex items-center gap-4'>
+                <div className='absolute right-6 flex items-center gap-4'>
                     {/* Theme Toggle */}
                     <ThemeToggle />
                     {/* Mobile Menu Icon */}
