@@ -8,8 +8,8 @@ import data from '@/content/data.json';
 export default function Hero() {
     const { meta } = data;
 
-    const { resolvedTheme }  = useTheme();
-    const isDark = resolvedTheme === 'dark';
+    const { theme }  = useTheme();
+    const isDark = theme === 'dark';
 
     return (
         <section id="home" className="min-h-screen flex items-center justify-center pt-24 px-8 md:px-60">

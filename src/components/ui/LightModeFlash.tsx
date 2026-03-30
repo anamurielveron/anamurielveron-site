@@ -16,7 +16,6 @@ function randomPosition(): Position {
 
 export default function LightModeFlash() {
   const [visible, setVisible] = useState(false);
-  const [fading, setFading] = useState(false);
   const [position, setPosition] = useState<Position>({ top: '30%', left: '40%' });
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -42,7 +41,7 @@ export default function LightModeFlash() {
         position: 'fixed',
         top: position.top,
         left: position.left,
-        zIndex: 9990,
+        zIndex: 9997,
         pointerEvents: 'none',
         opacity: visible ? 1 : 0,
       }}

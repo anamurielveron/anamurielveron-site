@@ -7,8 +7,8 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
 export default function NotFound() {
-    const { resolvedTheme }  = useTheme();
-    const isDark = resolvedTheme === 'dark';
+    const { theme }  = useTheme();
+    const isDark = theme === 'dark';
 
     return (
         <>

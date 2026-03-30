@@ -2,17 +2,13 @@
 
 import { useTheme } from 'next-themes';
 import { RiSunLine, RiSunFill, RiMoonLine, RiMoonFill } from 'react-icons/ri';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import LightModeFlash from './LightModeFlash';
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const [flashKey, setFlashKey] = useState(0);
   const [showFlash, setShowFlash] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return <div className='w-6 h-6' />;
   
   const handleToggle = () => {
     const next = theme === 'dark' ? 'light' : 'dark';
