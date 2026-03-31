@@ -1,6 +1,11 @@
+'use client';
+
+import { useState } from 'react';
+import D20Roll from '@/components/ui/D20Roll';
 import ItemBadge from "@/components/ui/ItemBadge";
 import data from "@/content/data.json";
 import type { TechStack } from '@/types';
+
 
 function TimelineEntry({
     dates,
@@ -29,6 +34,15 @@ function TimelineEntry({
 
 export default function About() {
     const { experience, education, techStack, interests } = data;
+
+    const [showD20, setShowD20] = useState(false);
+    const [d20Key, setD20Key] = useState(0);
+
+    const handleD20Click = () => {
+        setD20Key((prev) => prev + 1);
+        setShowD20(true);
+        console.log('Rolling a d20!');
+    };
 
     return (
         <section id="about" className="px-8 md:px-60 py-24">
@@ -96,9 +110,29 @@ export default function About() {
                 </h3>
                 <div className="flex flex-wrap gap-2 py-5">
                     {interests.map((item) => (
-                        <ItemBadge key={item} label={item} />
+                        item == 'Dungeons & Dragons' ? (
+                            <button
+                                key={item}
+                                onClick={handleD20Click}
+                                className='border border-accent px-2 py-1
+                                            font-body text-xs text-accent
+                                            hover:bg-accent hover:text-accent-content
+                                            transition-colors cursor-pointer'
+                                aria-label="Roll a d20"
+                            >
+                                {item}
+                            </button>
+                        ) : (
+                            <ItemBadge key={item} label={item} />
+                        )
                     ))}
                 </div>
+
+                {showD20 && (
+                    <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
+                        <D20Roll key={d20Key} onRoll={() => setShowD20(false)} />
+                    </div>
+                )}
             </div>
         </section>
     );

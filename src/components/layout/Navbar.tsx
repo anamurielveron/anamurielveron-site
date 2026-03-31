@@ -33,7 +33,7 @@ export default function Navbar() {
                     className='absolute left-6' aria-label="Home"
                 >
                 {/* LOGO */}
-                    <Logo className="w-18 h-18 text-accent hover:scale-110 transition-transform" />
+                    <Logo className="w-18 h-18 text-accent hover:scale-110 transition-transform p-1" />
                 </Link>
 
                 {/* Desktop Nav */}

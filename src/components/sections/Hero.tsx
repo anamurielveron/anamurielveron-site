@@ -24,7 +24,7 @@ export default function Hero() {
                 </div>
                 {/* Text */}
                 <div>
-                    <p className='font-body text-sm text- mb-1'>
+                    <p className='font-body text-sm text-accent mb-1'>
                         {meta.greeting}
                     </p>
                     <h1 className='font-heading text-3xl md:text-4xl font-bold text-accent uppercase'>
