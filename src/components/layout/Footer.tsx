@@ -1,5 +1,6 @@
 import { RiGithubFill, RiLinkedinFill,  RiInstagramFill, RiMailFill} from "react-icons/ri";
 import data from '@/content/data.json';
+import HitCounter from './HitCounter';
 
 export default function Footer() {
     const { contact } = data;
@@ -12,19 +13,22 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="fixed bottom-0 right-0 flex items-center gap-5 p-6 z-40">
-            {links.map(({ href, icon: Icon, label }) => (
-                <a
-                    key={label}
-                    href={href}
-                    target={href.startsWith('mailto') ? undefined: '_blank'}
-                    rel="noopener noreferrer"
-                    arial-label={label}
-                    className="text-accent hover:scale-110 transition-transform"
-                >
-                    <Icon size={20} />
-                </a>
-            ))}
+        <footer className="fixed bottom-0 left-0 right-0 flex items-center justify-between p-6 z-40">
+            <HitCounter />
+            <div className="flex items-center gap-5">
+                {links.map(({ href, icon: Icon, label }) => (
+                    <a
+                        key={label}
+                        href={href}
+                        target={href.startsWith('mailto') ? undefined: '_blank'}
+                        rel="noopener noreferrer"
+                        arial-label={label}
+                        className="text-accent hover:scale-110 transition-transform"
+                    >
+                        <Icon size={20} />
+                    </a>
+                ))}
+            </div>
         </footer>
     );
 }
