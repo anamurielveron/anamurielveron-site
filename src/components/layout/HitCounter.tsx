@@ -4,25 +4,30 @@ import { useEffect, useState } from 'react';
 
 export default function HitCounter() {
   const [count, setCount] = useState<number | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-        fetch('/api/hits', { method: 'POST' })
-        .then((r) => r.json())
-        .then((data) => setCount(data.count));
-    }
+    fetch('/api/hits', { method: 'POST' })
+      .then((r) => r.json())
+      .then((data) => {
+        setCount(data.count);
+        setLoading(false);
+      })
+      .catch(() => {
+        console.error('Failed to fetch hit count');
+        setLoading(false);
+      });
   }, []);
 
-// FOR TESTINGGGGG
-  if (count === null) return (
+  if (loading) return (
     <span className="font-body text-xs text-accent bg-base-100 border border-accent p-1">
-      hits: 0
+      hits: ...
     </span>
   );
 
   return (
     <span className="font-body text-xs text-accent bg-base-100 border border-accent p-1">
-      hits: {count.toLocaleString()}
+      hits: {count?.toLocaleString() ?? 0}
     </span>
   );
 }
