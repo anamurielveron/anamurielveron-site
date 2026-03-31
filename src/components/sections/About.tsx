@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import D20Roll from '@/components/ui/D20Roll';
 import ItemBadge from "@/components/ui/ItemBadge";
 import data from "@/content/data.json";
-import type { TechStack } from '@/types';
+import type { TechStack, Interest } from '@/types';
+import { interactiveRegistry } from './interactiveRegistry';
 
 
 function TimelineEntry({
@@ -33,16 +33,10 @@ function TimelineEntry({
 }
 
 export default function About() {
-    const { experience, education, techStack, interests } = data;
+    const { experience, education, techStack } = data;
 
-    const [showD20, setShowD20] = useState(false);
-    const [d20Key, setD20Key] = useState(0);
-
-    const handleD20Click = () => {
-        setD20Key((prev) => prev + 1);
-        setShowD20(true);
-        console.log('Rolling a d20!');
-    };
+    const [activeInteraction, setActiveInteraction] = useState<string | null>(null);
+    const [interactionKey, setInteractionKey] = useState(0);
 
     return (
         <section id="about" className="px-8 md:px-60 py-24">
@@ -109,28 +103,57 @@ export default function About() {
                     Interests
                 </h3>
                 <div className="flex flex-wrap gap-2 py-5">
-                    {interests.map((item) => (
-                        item == 'Dungeons & Dragons' ? (
-                            <button
-                                key={item}
-                                onClick={handleD20Click}
-                                className='border border-accent px-2 py-1
-                                            font-body text-xs text-accent
-                                            hover:bg-accent hover:text-accent-content
-                                            transition-colors cursor-pointer'
-                                aria-label="Roll a d20"
-                            >
-                                {item}
-                            </button>
-                        ) : (
-                            <ItemBadge key={item} label={item} />
-                        )
-                    ))}
+                    {(data.interests as Interest[]).map((interest) => {
+                        if (interest.type === 'link') {
+                            return (
+                                <a
+                                    key={interest.label}
+                                    href={interest.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className='border border-accent px-2 py-1
+                                                font-body text-xs text-accent
+                                                hover:bg-accent hover:text-accent-content
+                                                transition-colors'
+                                    aria-label={`Visit ${interest.label}`}
+                                >
+                                    {interest.label}
+                                </a>
+                            );
+                        }
+
+                        const isInteractive = interest.type === 'interactive';
+                        const InteractiveComponent = isInteractive ? interactiveRegistry[interest.interaction || ''] : null;
+
+                        if (isInteractive && InteractiveComponent) {
+                            return (
+                                <button
+                                    key={interest.label}
+                                    onClick={() => {
+                                        setInteractionKey((prev) => prev + 1);
+                                        setActiveInteraction(interest.interaction || null);
+                                    }}
+                                    className='border border-accent px-2 py-1
+                                                font-body text-xs text-accent
+                                                hover:bg-accent hover:text-accent-content
+                                                transition-colors cursor-pointer'
+                                    aria-label={`Interact with ${interest.label}`}
+                                >
+                                    {interest.label}
+                                </button>
+                            );
+                        }
+
+                        return <ItemBadge key={interest.label} label={interest.label} />;
+                    })}
                 </div>
 
-                {showD20 && (
+                {activeInteraction && interactiveRegistry[activeInteraction] && (
                     <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
-                        <D20Roll key={d20Key} onRoll={() => setShowD20(false)} />
+                        {(() => {
+                            const InteractiveComponent = interactiveRegistry[activeInteraction];
+                            return <InteractiveComponent key={interactionKey} onClose={() => setActiveInteraction(null)} />;
+                        })()}
                     </div>
                 )}
             </div>

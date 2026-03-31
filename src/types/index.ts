@@ -19,6 +19,15 @@ export interface TechStack {
     items: string[];
 }
 
+export interface Interest {
+    label: string;
+    type: 'badge' | 'interactive' | 'link';
+    interaction?: string;
+    href?: string;
+}
+
+export type InterestItem = string | Interest;
+
 export interface Project {
     id: string;
     title: string;
@@ -47,7 +56,7 @@ export interface SiteData {
     experience: ExperienceEntry[];
     education: EducationEntry[];
     techStack: TechStack[];
-    interests: string[];
+    interests: InterestItem[];
     projects: Project[];
     contact: {
         status: string;
