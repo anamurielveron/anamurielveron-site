@@ -33,7 +33,7 @@ export default function Navbar() {
                     aria-label="Home"
                 >
                 {/* LOGO */}
-                <Logo className="w-16 h-16 text-accent hover:scale-110 transition-transform" size={18} />
+                <Logo className="w-14 h-14 text-accent hover:scale-110 transition-transform" size={18} />
                     
                 </Link>
 

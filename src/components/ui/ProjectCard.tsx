@@ -18,8 +18,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                         className="object-cover grayscale group-hover/card:grayscale-0 transition-all"
                     />
                 ) : (
-                    // TODO: center logo T^T
-                    <div className="absolute inset-0 flex items-center justify-center p-6">
+                    <div className="flex items-center justify-center h-full">
                         <Logo className="w-24 h-24 text-accent opacity-30
                                         group-hover/card:opacity-100 transition-opacity duration-300" />
                     </div>
