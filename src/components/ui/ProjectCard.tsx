@@ -38,7 +38,8 @@ export default function ProjectCard({ project }: { project: Project }) {
                     {project.techStack.map((tech) => (
                         <span key={tech}
                                 className='border border-accent px-2 py-0.5
-                                            font-body text-[10px] text-accent'>
+                                            font-body text-[10px] text-accent
+                                            hover:bg-accent hover:text-accent-content transition-colors'>
                             {tech}
                         </span>
                     ))}
