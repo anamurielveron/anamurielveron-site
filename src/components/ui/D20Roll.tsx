@@ -50,7 +50,7 @@ export default function D20Roll({ onRoll }: { onRoll: () => void }) {
             </svg>
             <p className='font-body text-sm text-accent'>
                 {finalNum && (
-                    isCrit ? 'nat 20! ✦' : isFumble ? 'nat 1...\n womp womp' : null
+                    isCrit ? 'nat 20! ✦' : isFumble ? 'womp womp' : null
                 )}
             </p>
         </div>

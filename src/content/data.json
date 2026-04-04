@@ -55,7 +55,7 @@
         },
         {
             "category": "Backend",
-            "items": ["ASP.NET", "C#", "Java"]
+            "items": ["Node.js", "ASP.NET", "C#", "Java"]
         },
         {
             "category": "Data & Databases",
