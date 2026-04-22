@@ -1,4 +1,4 @@
-import ProjectCard from "../ui/ProjectCard";
+import ProjectCard from "../ui/ProjectCardVertical";
 import data from '@/content/data.json';
 import type { Project } from '@/types';
 
@@ -11,7 +11,7 @@ export default function Projects() {
                 Projects
             </h2>
 
-            <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {featured.map((project) => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
