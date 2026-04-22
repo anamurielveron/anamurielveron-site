@@ -26,7 +26,7 @@ export default function D20Roll({ onClose }: { onClose: () => void }) {
                     setTimeout(onClose, 600);
                 }, 1500);
             }
-            }, 80);
+        }, 80);
         return () => clearInterval(interval);
     }, [onClose]);
 
