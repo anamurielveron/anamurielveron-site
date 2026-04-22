@@ -22,8 +22,8 @@ export default function D20Roll({ onRoll }: { onRoll: () => void }) {
                 setDisplayNum(result);
                 console.log(`Final roll: ${result}`);
                 setTimeout(() => {
-                setRolling(false);
-                setTimeout(onRoll, 600);
+                    setRolling(false);
+                    setTimeout(onRoll, 600);
                 }, 2500);
             }
             }, 80);
