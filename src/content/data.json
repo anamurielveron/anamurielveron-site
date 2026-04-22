@@ -71,13 +71,13 @@
         }
     ],
     "interests": [
-        "Baking",
-        "Crafts",
-        "Dungeons & Dragons",
-        "Film",
-        "Literature",
-        "Tea",
-        "Videogames"
+        { "label": "Baking", "type": "badge" },
+        { "label": "Crafts", "type": "badge" },
+        { "label": "Dungeons & Dragons", "type": "interactive", "interaction": "d20" },
+        { "label": "Film", "type": "link", "href": "https://boxd.it/7ab3p" },
+        { "label": "Literature", "type": "badge" },
+        { "label": "Tea", "type": "badge" },
+        { "label": "Videogames", "type": "link", "href": "https://store.steampowered.com/app/1145360/Hades/" }
     ],
     "projects": [
         {

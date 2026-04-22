@@ -26,7 +26,7 @@ export default function D20Roll({ onRoll }: { onRoll: () => void }) {
                     setTimeout(onRoll, 600);
                 }, 2500);
             }
-            }, 80);
+        }, 80);
         return () => clearInterval(interval);
     }, [onRoll]);
 
@@ -50,7 +50,7 @@ export default function D20Roll({ onRoll }: { onRoll: () => void }) {
             </svg>
             <p className='font-body text-sm text-accent'>
                 {finalNum && (
-                    isCrit ? 'nat 20! ✦' : isFumble ? 'womp womp' : null
+                    isCrit ? 'crit! ✦' : isFumble ? 'womp womp' : null
                 )}
             </p>
         </div>
