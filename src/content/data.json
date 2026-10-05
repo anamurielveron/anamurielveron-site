@@ -1,14 +1,14 @@
 {
     "meta": {
         "name": "Ana Muriel Veron",
-        "title": "BS Computer Science Student | Programmer",
+        "title": "Software Developer",
         "greeting": "HELLO, FRIEND.",
         "photo": "/jiji.png",
         "resume": "/VERON-resume.pdf"
     },
     "currently": [
-        {"type": "watching", "item": "One Piece Live Action"},
-        {"type": "playing", "item": "Dungeons & Dragons 5e"}
+        {"type": "playing", "item": "Team Fight Tactics"},
+        {"type": "reading", "item": "Sunrise on the Reaping"}
     ],
     "experience": [
         {
@@ -19,8 +19,8 @@
             "description": ""
         },
         {
-            "start": "Nov 2022",
-            "end": "Feb 2023",
+            "start": "2022",
+            "end": "2023",
             "role": "Team Lead for Media & Publicity",
             "organization": "DLSU Commission on Environmental Protection",
             "description": ""
@@ -50,20 +50,20 @@
     ],
     "techStack": [
         {
-            "category": "Frontend",
-            "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS"]
+            "category": "Languages",
+            "items": ["C#", "Java", "Python", "JavaScript", "TypeScript", "SQL", "HTML", "CSS"]
         },
         {
-            "category": "Backend",
-            "items": ["Node.js", "ASP.NET", "C#", "Java"]
+            "category": "Frameworks & Libraries",
+            "items": ["ASP.NET Razor", "React", "Next.js", "Tailwind CSS", "jQuery"]
         },
         {
             "category": "Data & Databases",
-            "items": ["Microsoft SQL Server", "SQL", "Python", "Pandas", "NumPy"]
+            "items": ["Microsoft SQL Server", "SSMS", "Planetscale", "Prisma", "Pandas", "NumPy"]
         },
         {
             "category": "Tools",
-            "items": ["Git", "TortoiseSVN", "Visual Studio", "Visual Studio Code"]
+            "items": ["Git", "TortoiseSVN", "Visual Studio", "Vercel", "Jira"]
         },
         {
             "category": "Design",
@@ -76,7 +76,6 @@
         { "label": "Dungeons & Dragons", "type": "interactive", "interaction": "d20" },
         { "label": "Film", "type": "link", "href": "https://boxd.it/7ab3p" },
         { "label": "Literature", "type": "badge" },
-        { "label": "Tea", "type": "badge" },
         { "label": "Videogames", "type": "link", "href": "https://store.steampowered.com/app/1145360/Hades/" }
     ],
     "projects": [
