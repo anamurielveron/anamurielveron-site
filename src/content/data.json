@@ -31,21 +31,21 @@
             "start": "2021",
             "end": "2026",
             "degree": "BS Computer Science",
-            "institution": "De La Salle University - Manila, Philippines",
+            "institution": "De La Salle University - Manila",
             "description": "Specialization in Software Technology"
         },
         {
             "start": "2019",
             "end": "2021",
-            "degree": "BA Literature",
-            "institution": "University of Santo Tomas - Manila, Philippines",
-            "description": "Completed 1.5 years before transferring to DLSU"
+            "degree": "BA Literature (coursework)",
+            "institution": "University of Santo Tomas - Manila",
+            "description": ""
         },
         {
             "start": "2017",
             "end": "2019",
             "degree": "Senior High - Humanities and Social Sciences",
-            "institution": "St. Stephen's High School"
+            "institution": "St. Stephen's High School | 聖公會中學 - Manila"
         }
     ],
     "techStack": [
@@ -75,6 +75,7 @@
         { "label": "Crafts", "type": "badge" },
         { "label": "Dungeons & Dragons", "type": "interactive", "interaction": "d20" },
         { "label": "Film", "type": "link", "href": "https://boxd.it/7ab3p" },
+        { "label": "Graphic Design", "type": "link", "href": "TODO: Add portfolio/IG link" },
         { "label": "Literature", "type": "badge" },
         { "label": "Videogames", "type": "link", "href": "https://store.steampowered.com/app/1145360/Hades/" }
     ],
@@ -91,7 +92,7 @@
         }
     ],
     "contact": {
-        "status": "Open to chat",
+        "status": "Open to opportunities",
         "email": "anamurielveron@gmail.com",
         "github": "https://github.com/anamurielveron",
         "linkedin": "https://www.linkedin.com/in/anamurielveron/"
